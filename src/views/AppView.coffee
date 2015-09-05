@@ -33,10 +33,10 @@ class window.AppView extends Backbone.View
           "It's a push! You neither win nor lose."
         when playerScore > 21
           "You busted! You lose."
+        when playerScore is "Blackjack"
+          "You have a Blackjack! You win 3 to 2 on your bet!"
         when dealerScore > 21
           "Dealer busted! You win!"
-        when playerScore is "Blackjack"
-          "You have a Blackjack! You win!"
         when dealerScore is "Blackjack"
           "Dealer has a Blackjack. You lose."
         when playerScore > dealerScore
