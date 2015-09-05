@@ -13,7 +13,7 @@ class window.AppView extends Backbone.View
     @render()
 
   render: ->
-    @$el.children().detach()
+    #@$el.children().detach()
     @model.deal()
     playerHand = @model.get 'playerHand'
     dealerHand = @model.get 'dealerHand'

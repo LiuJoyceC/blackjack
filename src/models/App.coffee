@@ -7,6 +7,10 @@ class window.App extends Backbone.Model
 
   deal: ->
     deck = @get 'deck'
+    #if deck.length is <25% of original length or <16 cards
+    if deck.length < 16
+      alert 'Shuffling deck now...'
+      @set 'deck', deck = new Deck()
     @set 'playerHand', playerHand = deck.dealPlayer()
     @set 'dealerHand', dealerHand = deck.dealDealer()
 
