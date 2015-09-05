@@ -7,7 +7,6 @@ class window.Hand extends Backbone.Collection
     @add(@deck.pop())
     scoreArray = [hardScore, softScore] = @scores()
     if hardScore > 21
-      #alert if @isDealer then 'Dealer busted! You win!' else 'You busted! You lose.'
       @trigger 'endGame'
     scoreArray
 
