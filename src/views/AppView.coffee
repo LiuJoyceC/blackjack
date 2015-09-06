@@ -27,21 +27,21 @@ class window.AppView extends Backbone.View
     playerScore = @model.get('playerHand').bestScore()
     dealerScore = @model.get('dealerHand').bestScore()
     alert(
-      (switch true
-        when playerScore is dealerScore
-          #If both have blackjack, it's also a push
-          "It's a push! You neither win nor lose."
-        when playerScore > 21
-          "You busted! You lose."
-        when playerScore is "Blackjack"
-          "You have a Blackjack! You win 3 to 2 on your bet!"
-        when dealerScore > 21
-          "Dealer busted! You win!"
-        when dealerScore is "Blackjack"
-          "Dealer has a Blackjack. You lose."
-        when playerScore > dealerScore
-          "Your score is higher. You win!"
-        else "Your score is lower. You lose."
+        (switch true
+          when playerScore is dealerScore
+            #If both have blackjack, it's also a push
+            "It's a push! You neither win nor lose."
+          when playerScore > 21
+            "You busted! You lose."
+          when playerScore is "Blackjack"
+            "You have a Blackjack! You win 3 to 2 on your bet!"
+          when dealerScore > 21
+            "Dealer busted! You win!"
+          when dealerScore is "Blackjack"
+            "Dealer has a Blackjack. You lose."
+          when playerScore > dealerScore
+            "Your score is higher. You win!"
+          else "Your score is lower. You lose."
         ) + "\nClick OK to deal again."
-      )
+    )
     @render()

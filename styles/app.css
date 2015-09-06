@@ -6,6 +6,7 @@
   height: 140px;
   margin-right: 10px;
   margin-bottom: 10px;
+  background-size: 100%;
 }
 
 .covered {
@@ -22,6 +23,9 @@ img {
   height: 100%;
 }
 
+.hidden {
+  visibility: hidden;
+}
 
 /*
 
